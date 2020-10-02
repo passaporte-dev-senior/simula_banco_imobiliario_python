@@ -30,3 +30,18 @@ def test_dado_seed():
     assert dice.numero == 6
     dice = Dado(seed=0)
     assert dice.numero == 4
+
+
+def test_jogador_transacao():
+    jogador_01 = Jogador()
+    jogador_01.transacao(-50)
+    assert jogador_01.saldo == 250
+    jogador_01.transacao(100)
+    assert jogador_01.saldo == 350
+
+
+def test_jogador_perde():
+    jogador_01 = Jogador()
+    jogador_01.transacao(-350)
+    assert jogador_01.saldo == -50
+    assert jogador_01.status == 'Inativo'

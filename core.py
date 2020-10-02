@@ -3,10 +3,23 @@ import random
 
 class Jogador:
     def __init__(self):
-        self.status = 'Ativo'
-        self.saldo = 300
+        self._status = 'Ativo'
+        self._saldo = 300
         self.propriedades = None
         self.posicao = 1
+
+    @property
+    def saldo(self):
+        return self._saldo
+
+    def transacao(self, valor):
+        self._saldo += valor
+        if self.saldo < 0:
+            self._status = 'Inativo'
+
+    @property
+    def status(self):
+        return self._status
 
 
 class Propriedade:
