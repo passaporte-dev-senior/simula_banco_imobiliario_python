@@ -17,6 +17,10 @@ def test_propriedade():
     assert hasattr(propriedade_01, 'aluguel')
     assert hasattr(propriedade_01, 'proprietario')
     assert hasattr(propriedade_01, 'posicao')
+    assert propriedade_01.custo is None
+    assert propriedade_01.aluguel is None
+    assert propriedade_01.proprietario is None
+    assert propriedade_01.posicao == 1
 
 
 def test_dado():

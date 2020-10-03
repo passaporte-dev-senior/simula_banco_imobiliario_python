@@ -2,9 +2,9 @@ import random
 
 
 class Jogador:
-    def __init__(self):
+    def __init__(self, saldo_inicial=300):
         self._status = 'Ativo'
-        self._saldo = 300
+        self._saldo = saldo_inicial
         self.propriedades = None
         self.posicao = 1
 
