@@ -23,7 +23,7 @@ class Jogador:
 
 
 class Propriedade:
-    def __init__(self, custo=0, aluguel=0, posicao=1):
+    def __init__(self, custo=None, aluguel=None, posicao=1):
         self.custo = custo
         self.aluguel = aluguel
         self.posicao = posicao
@@ -38,3 +38,8 @@ class Dado:
     def numero(self):
         random.seed(self.seed)
         return random.randint(1, 6)
+
+
+class Tabuleiro:
+    def __init__(self, posicoes=20):
+        self.num_posicoes = posicoes

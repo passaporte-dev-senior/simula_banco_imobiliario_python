@@ -1,4 +1,4 @@
-from core import Jogador, Propriedade, Dado
+from core import Jogador, Propriedade, Dado, Tabuleiro
 
 
 def test_jogador():
@@ -45,3 +45,10 @@ def test_jogador_perde():
     jogador_01.transacao(-350)
     assert jogador_01.saldo == -50
     assert jogador_01.status == 'Inativo'
+
+
+def test_tabuleiro():
+    tab = Tabuleiro()
+    assert isinstance(tab, Tabuleiro)
+    assert hasattr(tab, 'num_posicoes')
+    assert tab.num_posicoes == 20
