@@ -21,6 +21,10 @@ class Jogador:
     def status(self):
         return self._status
 
+    # TODO: comportamento Jogador: impulsivo | exigente | cauteloso | aleatório
+    # TODO: o Jogador terá registro de suas propriedades? Delega para Propriedade?
+    # TODO: o Jogador precisa saber sua posição? Delega para o Tabuleiro?
+
 
 class Propriedade:
     def __init__(self, custo=None, aluguel=None, posicao=1):
@@ -28,6 +32,9 @@ class Propriedade:
         self.aluguel = aluguel
         self.posicao = posicao
         self.proprietario = None
+
+    # TODO: a Propriedade precisa saber sua posição? Delega para o Tabuleiro?
+    # TODO: a Propriedade terá registro de seu proprietário? Delega para Jogador?
 
 
 class Dado:
@@ -43,3 +50,8 @@ class Dado:
 class Tabuleiro:
     def __init__(self, posicoes=20):
         self.num_posicoes = posicoes
+
+    # TODO: controle número de rodadas
+    # TODO: controle de Jogador/Propriedade em cada posição (??)
+    # TODO: solicita ação do Jogador (compra ou não, pagamento aluguel) (??)
+    # TODO: solicita ação da Propriedade (venda ou não, cobrança aluguel) (??)
